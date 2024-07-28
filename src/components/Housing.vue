@@ -53,6 +53,7 @@
         </tbody>
       </table>
     </div>
+
   </div>
 </template>
 
@@ -63,6 +64,8 @@ import {
   formatDistanceToNow,
   differenceInDays,
 } from "date-fns";
+
+import { Facebook } from 'vue-socialmedia-share';
 
 const basePromise = 1500000;
 const builds = [

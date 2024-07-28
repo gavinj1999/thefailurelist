@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "serve": "npm run serve",
-    "start": "npm run serve"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -20,7 +18,9 @@
     "vue": "^3.4.29",
     "vue-chartjs": "^5.3.1",
     "vue-cli": "^2.9.6",
-    "vue-html2canvas": "^0.0.4"
+    "vue-html2canvas": "^0.0.4",
+    "vue-social-sharing": "^4.0.0-alpha4",
+    "vue-socialmedia-share": "^1.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
