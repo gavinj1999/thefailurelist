@@ -2,6 +2,7 @@
 import LineChart from "./components/LineChart.vue";
 import Tweets from "./components/Tweets.vue";
 import Housing from "./components/Housing.vue";
+import HousingBetter from "./components/HousingBetter.vue";
 import VueHtml2Canvas from 'vue-html2canvas';
  
 
@@ -10,8 +11,9 @@ import VueHtml2Canvas from 'vue-html2canvas';
 <template>            
 
 
-  <div class="poppins-regular">
-     <Housing />   
+  <div class="poppins-regular" style="min-width:29.5rem;">
+     <Housing />  
+
 </div>
 </template>
 

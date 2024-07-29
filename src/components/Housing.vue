@@ -1,7 +1,7 @@
 <template>
   <div
     id="image"
-    class="rounded-4 w-100 py-4 bg-danger text-white text-center text-black"
+    class="rounded-4 py-4 bg-danger text-white text-center text-black"
   >
     <h4 class="poppins-bold">Labours Housebuilding Promise</h4>
     <div class="bg-rayner"></div>
