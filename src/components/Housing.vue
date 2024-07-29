@@ -1,7 +1,7 @@
 <template>
   <div
     id="image"
-    class="rounded-4 py-4 bg-danger text-white text-center text-black"
+    class="rounded-4 py-4 bg-danger text-white text-center text-black "
   >
     <h4 class="poppins-bold">Labours Housebuilding Promise</h4>
     <div><img class="w-100" src="../../public/images/rayner.png" alt=""></div>
@@ -53,10 +53,12 @@
           </tr>
         </tbody>
       </table>
+    
     </div>
-
+  <a :href="'http://twitter.com/share?text=Labours Housebuilding promise, ' + housing[0].unbuilt.toFixed(0) +' behind schedule after '+ housing[0].diff +' days in Government&url=https://thefailurelist.co.uk/'">Tweet</a>
   </div>
 </template>
+
 
 <script setup>
 import {
