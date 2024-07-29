@@ -55,7 +55,7 @@
       </table>
     
     </div>
-  <a :href="'http://twitter.com/share?text=Labours Housebuilding promise, ' + housing[0].unbuilt.toFixed(0) +' behind schedule after '+ housing[0].diff +' days in Government&url=https://thefailurelist.co.uk/'">Tweet</a>
+  <a :href="'http://twitter.com/share?text=Labours Housebuilding promise, ' + housing[0].unbuilt.toFixed(0) +' behind schedule after '+ housing[0].diff +' days in Government&%20https://pbs.twimg.com/media/GTobX5sXMAAxXbU.png&url=https://thefailurelist.co.uk/&hashtags=LabourFail,LabourSumsNeverAddUp,CarnivalOfFools'">Tweet</a>
   </div>
 </template>
 
