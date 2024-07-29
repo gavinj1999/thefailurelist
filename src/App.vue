@@ -11,8 +11,11 @@ import VueHtml2Canvas from 'vue-html2canvas';
 <template>            
 
 
-  <div class="poppins-regular" style="min-width:29.5rem;">
-     <Housing />  
+  <div class="poppins-regular">
+    <div class="w-100 p-4">
+           <Housing />  
+    </div>
+
 
 </div>
 </template>

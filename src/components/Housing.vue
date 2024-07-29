@@ -4,7 +4,8 @@
     class="rounded-4 py-4 bg-danger text-white text-center text-black"
   >
     <h4 class="poppins-bold">Labours Housebuilding Promise</h4>
-    <div class="bg-rayner"></div>
+    <div><img class="w-100" src="../../public/images/rayner.png" alt=""></div>
+
     <div class="rounded px-4 pt-3">
       <table class="table table-dark">
         <tbody>
@@ -104,20 +105,17 @@ const housing = [
   },
 ];
 
-
-
-console.log(housing);
 </script>
 
 <style>
 .bg-rayner {
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   background-image: url(../assets/images/rayner.png);
+  width:100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: contain;
-  width: 500px;
-  position: relative;
-  height: 300px;
+
+  height: 240px;
 }
 </style>
