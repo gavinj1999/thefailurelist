@@ -12,7 +12,7 @@ import VueHtml2Canvas from 'vue-html2canvas';
 
 
   <div class="poppins-regular">
-    <div class="w-100 p-2">
+    <div class="xl:w-25 p-2">
            <Housing />  
     </div>
 

@@ -1,9 +1,9 @@
 <template>
   <div
     id="image"
-    class="rounded-4 py-4 bg-danger text-white text-center text-black "
+    class="rounded-4 py-4 bg-danger text-white text-center text-black"
   >
-    <h4 class="poppins-bold">Labours Housebuilding Promise</h4>
+    <div class="poppins-bold text-9xl p-6">Labours Housebuilding Promise</div>
     <div><img class="w-100" src="../../public/images/rayner.png" alt=""></div>
 
     <div class="rounded px-4 pt-3">
