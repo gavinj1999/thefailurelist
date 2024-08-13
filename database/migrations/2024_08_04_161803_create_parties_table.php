@@ -22,6 +22,7 @@ return new class extends Migration
             $table->boolean('isLordsSpiritualParty')->nullable(true);
             $table->integer('governmentType')->nullable(true);
             $table->boolean('isIndependentParty')->nullable(true);
+            $table->string('slug')->nullable(true);
             $table->timestamps();
         });
     }
