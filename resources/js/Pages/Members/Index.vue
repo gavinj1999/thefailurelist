@@ -61,7 +61,7 @@
 import { ref, computed } from "vue";
 import SiteLayout from '@/Layouts/SiteLayout.vue';
 import Search from '@/Components/Search.vue'
-import VueLazyload from 'vue-lazyload'
+
 const props = defineProps(['members','parties'])
 
 
