@@ -10,12 +10,12 @@
 
                 <div class="border-b px-4 pb-6">
                     <div class="min-h-[260px] text-center my-4">
-                        <div v-lazy-container="{ selector: 'img' }">
+
 
                         <div>
                             <div class="absolute antialiased mt-2 text-slate-800 ml-1 bg-slate-200 rounded-r-md p-1 border-1 text-xs" v-if="member.government">Government</div>
                             <div class="absolute antialiased mt-2 text-slate-800 ml-1 bg-slate-200 rounded-r-md p-1 border-1 text-xs" v-if="member.opposition">Oppostion</div>
-                            <img class="lazy  rounded-lg border-4 border-white dark:border-gray-800 mx-auto my-4" :src="'/storage/assets/images/members/thumbnails/'+member.slug+'.jpeg'" alt="">
+                            <img class="rounded-lg border-4 border-white dark:border-gray-800 mx-auto my-4" :src="'/storage/assets/images/members/thumbnails/'+member.slug+'.jpeg'" alt="">
                         </div>
 
 
@@ -31,7 +31,7 @@
                                 <span v-if="member.membershipStartDate === '2024-07-04 00:00:00'" class="rounded mx-2 my-2 px-2 text-xs bg-purple-700">Noob</span>
 
                             </div>
-                        </div>
+
 
                     </div>
 
