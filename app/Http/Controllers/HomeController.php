@@ -7,6 +7,7 @@ use App\Http\Requests\StoreHomeRequest;
 use App\Http\Requests\UpdateHomeRequest;
 use Inertia\Inertia;
 use App\Models\Party;
+use App\Models\Member;
 class HomeController extends Controller
 {
     /**
@@ -15,9 +16,11 @@ class HomeController extends Controller
     public function index()
     {
         $parties = Party::get();
+        $members = Member::with('party')->with('constituency')->with('opposition')->with('government')->get();
         return Inertia::render('Welcome',
         [
-            'parties' => $parties
+            'parties' => $parties,
+            'members' => $members
         ]
     );
     }

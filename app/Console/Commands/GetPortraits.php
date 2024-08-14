@@ -36,7 +36,7 @@ class GetPortraits extends Command
                 $name = 'assets/images/members/thumbnails/' . $member->slug . '.jpeg';
                 Storage::disk('public')->put($name, $imageContent);
             } catch (\Throwable $th) {
-                $url = 'C:\Users\gavin\OneDrive\Documents\vscode\thefailurelist\storage\app\public\assets\images\templates\no-image.jpeg';
+                $url = '/assets/images/templates/no-image.jpeg';
                 $imageContent = file_get_contents($url);
                 $name = 'assets/images/members/thumbnails/' . $member->slug . '.jpeg';
                 Storage::disk('public')->put($name, $imageContent);
@@ -49,7 +49,7 @@ class GetPortraits extends Command
                 $name = 'assets/images/members/portraits/' . $member->slug . '.jpeg';
                 Storage::disk('public')->put($name, $imageContent);
             } catch (\Throwable $th) {
-                $url = 'C:\Users\gavin\OneDrive\Documents\vscode\thefailurelist\storage\app\public\assets\images\templates\no-portrait.jpeg';
+                $url = 'assets/images/templates/no-portrait.jpeg';
                 $imageContent = file_get_contents($url);
                 $name = 'assets/images/members/thumbnails/' . $member->slug . '.jpeg';
                 Storage::disk('public')->put($name, $imageContent);
