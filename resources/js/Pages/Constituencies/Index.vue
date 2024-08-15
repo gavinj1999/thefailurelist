@@ -9,8 +9,8 @@
                 <div class="flex *:content-center justify-between">
                     <div class="">
                         <img class="p-2 w-24"
-                            :src="'/storage/assets/images/members/thumbnails/' + constituency.member.slug + '.jpeg'"
-                            alt="">
+                        :src="'https://members-api.parliament.uk/api/Members/'+constituency.member.member_id+'/Thumbnail'"  :alt="constituency.member.nameDisplayAs + ' thumbnail image'"
+                            >
                     </div>
                     <div class="p-4 w-full">
                         <div class="flex flex-col">

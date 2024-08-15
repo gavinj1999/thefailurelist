@@ -15,7 +15,7 @@
                                     <div class="absolute antialiased mt-2 text-slate-800 ml-1 bg-slate-200 rounded-r-md p-1 border-1 text-xs"
                                         v-if="member.opposition">Oppostion</div>
                                     <img class="rounded-lg  dark:border-gray-800 mx-auto my-4"
-                                        :src="'/storage/assets/images/members/thumbnails/' + member.slug + '.jpeg'" alt="">
+                                        :src="'https://members-api.parliament.uk/api/Members/' + member.member_id + '/Portrait'" alt="">
                                 </div>
                             </div>
                             <div class="py-2">
