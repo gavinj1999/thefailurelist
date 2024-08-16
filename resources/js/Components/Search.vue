@@ -1,4 +1,5 @@
 <template>
+
     <div class="flex justify-between mt-4">
         <div>
             <input class="rounded-full border-4 border-white active:border-indigo-600 focus:border-4  w-full "

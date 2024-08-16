@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         $parties = Party::get();
-        $members = Member::with('party')->with('constituency')->with('opposition')->with('government')->get();
+        $members = Member::with('party')->with('constituency')->with('opposition')->with('government')->orderBy('nameListAs')->get();
         return Inertia::render('Welcome',
         [
             'parties' => $parties,
