@@ -41,8 +41,8 @@ const filteredSite = computed(() => {
     let items = []
     if (siteSearchTerm.value != ''){
         items = props.members.filter(
-            member => member.nameDisplayAs.toLowerCase().includes(siteSearchTerm.value) ||
-             member.party.name.toLowerCase().includes(siteSearchTerm.value) )
+            member => member.nameDisplayAs.toLowerCase().includes(siteSearchTerm.value.toLowerCase()) ||
+             member.party.name.toLowerCase().includes(siteSearchTerm.value.toLowerCase()) )
     }
 
     return items
