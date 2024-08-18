@@ -57,6 +57,7 @@ class GetParties extends Command
                     'isLordsSpiritualParty' => $party->value->isLordsSpiritualParty,
                     'governmentType' => $party->value->governmentType,
                     'isIndependentParty' => $party->value->isIndependentParty,
+                    'slug' => $slugify->slugify($party->value->name)
                 ]
             );
             $i++;
