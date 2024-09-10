@@ -9,7 +9,7 @@ use App\Http\Controllers\GovernmentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\OppositionController;
-
+use App\Http\Controllers\ElectionController;
 Use App\Http\Controllers\PartyController;
 use App\Models\Opposition;
 
@@ -32,6 +32,10 @@ Route::get('/government/{slug}',[GovernmentController::class, 'show']);
 
 Route::get('/opposition', [OppositionController::class, 'index']);
 Route::get('/opposition /{slug}',[OppositionController::class, 'show']);
+
+Route::get('/elections', [ElectionController::class, 'index']);
+
+
 
 Route::middleware([
     'auth:sanctum',

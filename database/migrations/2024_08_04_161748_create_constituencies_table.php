@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('constituencies', function (Blueprint $table) {
             $table->id();
-            $table->integer('constituencyId')->nullable(true)->default(0);
+            $table->integer('constituency_id')->nullable(true)->default(0);
             $table->string('constituencyName')->nullable(true)->default(null);
             $table->integer('currentRepresentationId')->nullable(true)->default(0);
             $table->string('slug')->nullable(true)->default(null);
@@ -22,6 +22,8 @@ return new class extends Migration
             $table->longText('geometry')->nullable(true)->default(null);
             $table->integer('currentMp')->nullable(true)->default(0);
             $table->integer('latestParty')->nullable(true)->default(0);
+            $table->string('backgroundColour')->nullable(true)->default(0);
+            $table->string('foregroundColour')->nullable(true)->default(0);
             $table->timestamps();
         });
     }

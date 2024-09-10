@@ -8,6 +8,8 @@ use App\Http\Requests\UpdateHomeRequest;
 use Inertia\Inertia;
 use App\Models\Party;
 use App\Models\Member;
+use App\Models\Promise;
+
 class HomeController extends Controller
 {
     /**
@@ -17,10 +19,12 @@ class HomeController extends Controller
     {
         $parties = Party::get();
         $members = Member::with('party')->with('constituency')->with('opposition')->with('government')->orderBy('nameListAs')->get();
+        $promises = Promise::with('member')->with('party')->get();
         return Inertia::render('Welcome',
         [
             'parties' => $parties,
-            'members' => $members
+            'members' => $members,
+            'promises'=> $promises
         ]
     );
     }

@@ -13,7 +13,7 @@
                 <div class="border-b px-4 pb-6">
                     <div class="min-h-[260px] text-center my-4">
                         <img  class="rounded-lg border-4 border-white dark:border-gray-800 mx-auto my-4"
-                            :src="'https://members-api.parliament.uk/api/Members/'+post.member.member_id+'/Thumbnail'" alt="image">
+                            :src="'/storage/assets/images/members/thumbnails/'+post.member.slug+'.jpeg'" alt="image">
                         <div class="py-2">
                             <div>
                             <h3 class="font-bold text-xl text-gray-800 dark:text-white mb-1">
@@ -31,7 +31,9 @@
                         </button>
                     </div>
                     <div class="flex gap-2 px-2">
-                        <div v-if="post.government || post.opposition"> <span v-if="post.government">{{ post.government.name}}</span> <span v-if="post.opposition">{{ post.opposition.name}}</span>  </div>
+                        <div v-if="post.government || post.opposition">
+                            <span v-if="post.government">{{ post.government.name}}</span>
+                            <span v-if="post.opposition">{{ post.opposition.name}}</span>  </div>
                     </div>
                 </div>
             </div>

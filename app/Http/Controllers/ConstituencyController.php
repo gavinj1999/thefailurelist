@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Constituency;
+use App\Models\Geometry;
 use App\Http\Requests\StoreConstituencyRequest;
 use App\Http\Requests\UpdateConstituencyRequest;
 use Inertia\Inertia;
@@ -13,9 +14,12 @@ class ConstituencyController extends Controller
      */
     public function index()
     {
-        $constituencies = Constituency::with('member')->get();
+        $constituencies = Constituency::with(['member'])->get();
+        $geometry = Geometry::with(['constituency'])->get();
+
         return Inertia::render('Constituencies/Index', [
-            'constituencies' => $constituencies
+            'constituencies' => $constituencies,
+            'geometry' => $geometry
         ]);
     }
 

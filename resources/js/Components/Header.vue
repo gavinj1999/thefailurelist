@@ -53,6 +53,18 @@ const menus = [
         slug: "/opposition",
         title: "Opposition",
     },
+    {
+        slug: "/elections",
+        title: "Elections"
+    },
+    {
+        slug: "/promises",
+        title: "Promises"
+    },
+    {
+        slug: "/country",
+        title: "Country"
+    }
 ];
 
 const showMobileMenu = ref(false); // hiding it by default

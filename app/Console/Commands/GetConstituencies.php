@@ -54,16 +54,18 @@ class GetConstituencies extends Command
                     $this->info($slugify->slugify($constituencies->value->name));
                     $flight = Constituency::updateOrCreate(
                         [
-                            'constituencyId' => $constituencies->value->id
+                            'constituency_id' => $constituencies->value->id
                         ],
                         [
-                            'constituencyId' => $constituencies->value->id,
+                            'constituency_id' => $constituencies->value->id,
                             'constituencyName' => $constituencies->value->name,
                             'currentRepresentationId' => $constituencies->value->currentRepresentation->member->value->id,
                             'slug' => $slugify->slugify($constituencies->value->name),
                             'startDate' => $constituencies->value->startDate,
                             'endDate' => $constituencies->value->endDate,
                             'latestParty' => $constituencies->value->currentRepresentation->member->value->latestParty->id,
+                            'backgroundColour' => $constituencies->value->currentRepresentation->member->value->latestParty->backgroundColour,
+                            'foregroundColour' => $constituencies->value->currentRepresentation->member->value->latestParty->foregroundColour,
                         ]
                     );
                 }

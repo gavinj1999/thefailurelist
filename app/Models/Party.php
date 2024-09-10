@@ -12,5 +12,7 @@ class Party extends Model
     public function members(){
         return $this->hasMany(Member::class, 'party_id', 'party_id');
     }
+
+
     protected $guarded = [];
 }

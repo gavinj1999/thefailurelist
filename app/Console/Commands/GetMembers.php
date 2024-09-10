@@ -67,7 +67,7 @@ class GetMembers extends Command
                             'portrait' => 'https://members-api.parliament.uk/api/Members/'.$member->value->id.'/Portrait?cropType=0&webVersion=true',
                             'thumbnail'=> 'https://members-api.parliament.uk/api/Members/'.$member->value->id.'/Portrait?cropType=1&webVersion=true' ,
                             'banner' => 'https://members-api.parliament.uk/api/Members/'.$member->value->id.'/Portrait?cropType=&webVersion=true' ,
-                            'constituencyId' => $member->value->latestHouseMembership->membershipFromId,
+                            'constituency_id' => $member->value->latestHouseMembership->membershipFromId,
                             'membershipStartDate' => $member->value->latestHouseMembership->membershipStartDate,
                             'statusStartDate' => $member->value->latestHouseMembership->membershipStatus->statusStartDate,
 

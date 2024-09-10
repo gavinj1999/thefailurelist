@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('slug')->nullable(true);
             $table->integer('party_id')->nullable(true);
             $table->string('gender')->nullable(true);
-            $table->integer('constituencyId')->nullable(true);
+            $table->integer('constituency_id')->nullable(true);
             $table->string('portrait')->nullable(true);
             $table->string('thumbnail')->nullable(true);
             $table->string('banner')->nullable(true);

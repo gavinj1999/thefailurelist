@@ -12,5 +12,9 @@ class Constituency extends Model
     function member(){
         return $this->belongsTo(Member::class, 'currentRepresentationId', 'member_id');
     }
+
+    function geometry(){
+        return $this->hasOne(Geometry::class,'constituency_id','constituency_id');
+    }
     protected $guarded = [];
 }

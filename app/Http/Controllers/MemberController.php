@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Member;
 use App\Http\Requests\StoreMemberRequest;
 use App\Http\Requests\UpdateMemberRequest;
+use App\Models\Constituency;
 use Inertia\Inertia;
 use App\Models\Party;
 class MemberController extends Controller
@@ -14,13 +15,15 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Member::orderBy('party_id')->with('constituency')->with(['opposition', 'party', 'government'])->get();
+        $members = Member::orderBy('party_id')->with('constituency')->with('election')->with(['opposition', 'party', 'government'])->get();
+        $constituencies = Constituency::with('geometry')->get();
         $parties = Party::orderBy('name')->get();
         return Inertia::render(
             'Members/Index',
             [
                 'members' => $members,
-                'parties' => $parties
+                'parties' => $parties,
+                'constituencies' => $constituencies
             ]
         );
     }
@@ -46,12 +49,14 @@ class MemberController extends Controller
      */
     public function show($slug)
     {
-        $member = Member::where('slug', $slug)->with(['party','government','opposition'])->first();
+        $member = Member::where('slug', $slug)->with(['party','government','opposition','election'])->first();
+        $constituency = Constituency::where('currentRepresentationId',$member->member_id)->with('geometry')->first();
 
         return Inertia::render(
             'Members/Show',
             [
-                'member' => $member
+                'member' => $member,
+                'constituency' => $constituency
             ]
         );
     }

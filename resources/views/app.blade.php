@@ -21,5 +21,6 @@
     </head>
     <body class="antialiased">
         @inertia
+        <script src="https://unpkg.com/vue3-google-map"></script>
     </body>
 </html>

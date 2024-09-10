@@ -30,6 +30,8 @@ class GetPortraits extends Command
         $members = Member::select('slug', 'thumbnail', 'portrait')->get();
 
         foreach ($members as $member) {
+            if(!file_exists('assets/images/members/thumbnails/' . $member->slug . '.jpeg')  ){
+                $this->info('downloading ' . $member->nameDisplayAs);
             try {
                 $url = $member->thumbnail;
                 $imageContent = file_get_contents($url);
@@ -55,6 +57,7 @@ class GetPortraits extends Command
                 Storage::disk('public')->put($name, $imageContent);
 
             }
+           }
         }
     }
 }
