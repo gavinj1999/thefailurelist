@@ -1,11 +1,11 @@
 <template>
     <SiteLayout>
 
-        <div class="grid sm:gap-4 grid-cols-12">
+        <div class="grid grid-cols-12 sm:gap-4">
             <div class="sm:col-span-3 xs:col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-3">
                 <SiteSearch class="mx-2" @searchTerm="setSearchTerm" />
                 <div class="mx-2" v-for="member in filteredSite">
-                    <div class="flex gap-4 lg:my-4 mx-2 my-4">
+                    <div class="flex gap-4 mx-2 my-4 lg:my-4">
                         <div> <img class="w-16 rounded-full"
                                 :src="'/storage/assets/images/members/thumbnails/' + member.slug + '.jpeg'" alt="">
                         </div>

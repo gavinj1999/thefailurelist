@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <div class="grid sm:grid-cols-3 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-4">
+        <div class="grid gap-4 mt-4 sm:grid-cols-3 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
             <div v-for="member in filteredMembers" class="col-span-1">
                 <Member :member="member" />
