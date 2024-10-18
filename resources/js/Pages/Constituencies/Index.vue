@@ -26,7 +26,7 @@ for (const key in props.geometry) {
 
   boundaries[key] = {
     paths:JSON.parse(props.geometry[key].value),
-    strokeColor: '#00ff00',
+    strokeColor: '#'+props.geometry[key].constituency.backgroundColour,
     strokeOpacity: 0.8,
     strokeWeight: 2,
     fillColor: '#'+props.geometry[key].constituency.backgroundColour,
