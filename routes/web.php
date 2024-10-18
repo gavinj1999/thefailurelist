@@ -11,6 +11,8 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\OppositionController;
 use App\Http\Controllers\ElectionController;
 Use App\Http\Controllers\PartyController;
+Use App\Http\Controllers\PromiseController;
+
 use App\Models\Opposition;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
@@ -32,6 +34,9 @@ Route::get('/government/{slug}',[GovernmentController::class, 'show']);
 
 Route::get('/opposition', [OppositionController::class, 'index']);
 Route::get('/opposition /{slug}',[OppositionController::class, 'show']);
+
+Route::get('/promises', [PromiseController::class, 'index']);
+Route::get('/promise/{slug}',[PromiseController::class, 'show']);
 
 Route::get('/elections', [ElectionController::class, 'index']);
 

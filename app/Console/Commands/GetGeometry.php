@@ -38,15 +38,20 @@ class GetGeometry extends Command
         foreach ($constituencies as $constituency) {
             try {
                 $client = new Client([
-                    // You can set any number of default request options.
                     'timeout' => 2.0,
                 ]);
 
-                $geometryResponse = $client->get('https://members-api.parliament.uk/api/Location/Constituency/' . $constituency->constituency_id . '/Geometry');
+                //$geometryResponse = $client->get('https://members-api.parliament.uk/api/Location/Constituency/' . $constituency->constituency_id . '/Geometry');
+                $geometryResponse = $client->get('https://members-api.parliament.uk/api/Location/Constituency/4508/Geometry');
                 $geometry = json_decode($geometryResponse->getBody()->getContents());
-                $gemoetryArray = json_decode($geometry->value);
-                $coordinates = $gemoetryArray->coordinates[0][0];
+                $geometryArray = json_decode($geometry->value);
+                $coordinates = $geometryArray->coordinates;
 
+                foreach ($coordinates as $coordinate) {
+                    str($coordinate);
+                    // $this->info($coordinate['value']);
+                };
+                dd('done');
 
                 $i = 0;
                 $coord = '[';
@@ -57,11 +62,11 @@ class GetGeometry extends Command
                         $split = ', ';
                     }
                     $strLat =
-                    '{ "lat": ' . str($coordinate[1] .
-                    ', "lng": ' . str($coordinate[0]) .
-                    '}'
-                    .
-                    $split);
+                        '{ "lat": ' . str($coordinate[1] .
+                            ', "lng": ' . str($coordinate[0]) .
+                            '}'
+                            .
+                            $split);
 
                     $coord .= $strLat;
                 };
